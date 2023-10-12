@@ -14,10 +14,10 @@ const Heading = styled.h1`
 `;
 
 const Heading2 = styled.h6`
-color: #000;
-font-size: 17px;
-font-weight: 300;
-`
+  color: #000;
+  font-size: 17px;
+  font-weight: 300;
+`;
 
 const Container = styled.div`
   background: #fff;
@@ -31,7 +31,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   @media (max-width: 768px) {
-    margin:0 10px
+    margin: 0 10px;
   }
 `;
 
@@ -50,8 +50,8 @@ const Input = styled.input`
 const EmailInput = styled.input`
   border-bottom: 2px solid #333;
   padding: 8px;
-  padding-left:70px;
-  font-size:16px;
+  padding-left: 70px;
+  font-size: 16px;
   border-top: none;
   border-left: none;
   border-right: none;
@@ -62,10 +62,8 @@ const EmailInput = styled.input`
     border-bottom: 2px solid #000;
   }
   @media (max-width: 768px) {
-  font-size:12px;
-  padding-left:20px;
-
-    
+    font-size: 12px;
+    padding-left: 20px;
   }
 `;
 
@@ -79,7 +77,6 @@ const CheckboxContainer = styled.div`
   }
 
 }}`;
-
 
 const Button = styled.button`
   background: linear-gradient(
@@ -106,10 +103,10 @@ const Row = styled.div`
   justify-content: space-between;
   width: 90%;
   @media (max-width: 768px) {
-   width:100%;
-   flex-direction: column-reverse;
-   justify-content: center;
-   align-items: center;
+    width: 100%;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
   }
 `;
 
@@ -147,9 +144,9 @@ const DropDownHeader = styled.div`
   padding: 0.4em 2em 0.4em 1em;
   font-weight: 300;
   font-size: 1rem;
-  color:gray;
+  color: gray;
   background: #ffffff;
-  border-bottom: 1px solid #000
+  border-bottom: 1px solid #000;
 `;
 
 const DropDownListContainer = styled.div``;
@@ -165,7 +162,7 @@ const DropDownList = styled.ul`
   color: #000;
   font-size: 1rem;
   font-weight: 300;
-  position:absolute;
+  position: absolute;
   cursor: pointer;
   &:first-child {
     padding-top: 0.8em;
@@ -176,7 +173,7 @@ const ListItem = styled.li`
   list-style: none;
   margin-bottom: 0.8em;
 `;
-const options = ["500", "1000", "2000","4000","8000"];
+const options = ["500", "1000", "2000", "4000", "8000"];
 
 function EssayInput() {
   const [isChecked, setIsChecked] = useState(false);
@@ -188,7 +185,7 @@ function EssayInput() {
     setIsChecked(!isChecked);
   };
 
-  const onOptionClicked = (value:any) => () => {
+  const onOptionClicked = (value: any) => () => {
     setSelectedOption(value);
     setIsOpen(false);
     console.log(selectedOption);
@@ -200,9 +197,7 @@ function EssayInput() {
         <Heading>I need an essay about:</Heading>
         <Input type="text" placeholder="Your input text" />
         <Row>
-          <CheckboxContainer
-        
-          >
+          <CheckboxContainer>
             <label
               style={{
                 display: "inline-flex",
@@ -280,7 +275,14 @@ function EssayInput() {
               in-text citation
             </label>
           </CheckboxContainer>
-          <div style={{ width: "37%",display:"flex",flexDirection:"row",alignItems:"center"}}>
+          <div
+            style={{
+              width: "37%",
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+            }}
+          >
             <Heading2>With</Heading2>
             <DropDownContainer>
               <DropDownHeader onClick={toggling}>
@@ -302,7 +304,6 @@ function EssayInput() {
               )}
             </DropDownContainer>
             <Heading2>Words</Heading2>
-
           </div>
         </Row>
         {isChecked && (

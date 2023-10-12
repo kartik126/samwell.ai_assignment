@@ -6,10 +6,6 @@ import background from "../../public/background.svg";
 import EssayInput from "@/components/EssayInput";
 
 const ContainerWithBackground = styled.div`
-  background-image: url("../../public/background.svg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   position: relative;
   width: 100%;
   height: 200vh;
@@ -25,18 +21,16 @@ const Heading = styled.h1`
   padding: 0 3em;
   padding-top: 0.7em;
   line-height: 1.2;
-  height:120px;
+  height: 120px;
   @media (max-width: 768px) {
-    padding:1em 0;
+    padding: 1em 0;
 
     font-size: 2em;
-    height:50px;
-
+    height: 50px;
   }
 `;
 
-
-const PostHeading = styled.p`
+const SubHeading = styled.p`
   font-size: 1.5em;
   color: rgb(158, 70, 242);
   font-weight: 500;
@@ -50,8 +44,6 @@ const PostHeading = styled.p`
 `;
 
 export default function Home() {
-  const [first, setfirst] = useState("");
-
   return (
     <>
       <Navbar />
@@ -64,8 +56,8 @@ export default function Home() {
           style={{ zIndex: -999 }}
         />
         <Heading>Instantly write your next paper with Samwell.ai</Heading>
-        <PostHeading>Your easy, pleasant, and productive AI helper</PostHeading>
-        <EssayInput/>
+        <SubHeading>Your easy, pleasant, and productive AI helper</SubHeading>
+        <EssayInput />
       </ContainerWithBackground>
     </>
   );
